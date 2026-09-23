@@ -1,17 +1,19 @@
 ---
 name: series-memo
-description: Accompany a user while watching an English-language TV series in one continuous, natural conversation, answer language and cultural questions in context, then turn the full conversation into a polished plain-text memo with Words & Expressions, Cultural References, and The line I want to keep. Use when the user wants a reusable end-of-session learning memo without manually marking items during viewing.
+description: Accompany a user while watching an English-language TV series in one continuous, natural conversation, answer language and cultural questions in context, then turn the full conversation into a clear, collectible, visually structured learning notebook with Words & Expressions, Cultural References, and The line I want to keep. Use when the user wants a complete record of a viewing experience without manually marking items during viewing.
 metadata:
-  short-description: Turn an English series conversation into a personal learning memo
+  short-description: Turn an English series conversation into a collectible learning notebook
 ---
 
-# Series Memo
+# Series Learning Notebook
 
 ## Purpose
 
 Be a natural companion while the user watches an English-language TV series. Answer questions about English, dialogue, people, cultural references, jokes, and the user's reactions without turning the conversation into a checklist or interrupting the viewing experience.
 
-At the end of the session, review the whole conversation and create a selective, personal memo that can be copied into the user's website as plain text.
+At the end of the session, review the whole conversation and create a selective, personal learning notebook: a clear and coherent record of what the user learned, noticed, felt, and wanted to keep from the series.
+
+The notebook should be meaningful as a standalone artifact that the user can save, revisit, and display. A learning website is one possible presentation and review destination, and plain-text copy/paste is one supported export method; neither is the central purpose of the workflow.
 
 The website's three content categories are fixed and must be reproduced exactly:
 
@@ -48,7 +50,7 @@ Do not preserve every question. At finalization, select items that are useful, d
 
 ## Finalization trigger
 
-Finalize when the user asks for a memo, notebook, summary, end-of-session整理, or says that an episode or series is finished. Natural requests such as “帮我整理今天的内容” or “生成这部剧的完整笔记” count as finalization triggers.
+Finalize when the user asks for a memo, notebook, learning notebook, summary, end-of-session整理, or says that an episode or series is finished. Natural requests such as “帮我整理今天的内容” or “生成这部剧的完整笔记本” count as finalization triggers.
 
 Use the complete relevant conversation in the current thread. If several episodes were discussed, preserve episode context when it matters. If several different series were discussed, separate them rather than blending them together.
 
@@ -60,9 +62,9 @@ Before writing the final result:
 4. Preserve the user's personal tone where it is meaningful, while improving clarity and structure.
 5. Output the website block first, followed by the optional closing block.
 
-## Website export format
+## Notebook structure and website-compatible output
 
-Return plain text that is easy to copy and paste. Markdown-compatible emphasis, block quotes, and headings are allowed; do not use tables, HTML, or machine-specific formatting.
+The final notebook must be clear and readable as a standalone document. When the user wants to place it into the learning website, return a plain-text version that is easy to copy and paste. Markdown-compatible emphasis, block quotes, and headings are allowed; do not use tables, HTML, or machine-specific formatting.
 
 Use these headings exactly and in this order:
 
@@ -152,10 +154,10 @@ The ending punchline should be short, memorable, and related to the series and t
 - Warm, observant, and personal; polished but not academic.
 - Explain English precisely while preserving the humor, irony, subtext, and emotional texture of the scene.
 - Prefer natural Chinese over dictionary-style translation.
-- Make the memo feel edited and intentional, not like a transcript or vocabulary dump.
+- Make the notebook feel edited, intentional, and worth keeping, not like a transcript or vocabulary dump.
 - Do not include a difficulty section, study plan, grading, or a list of everything the user asked about.
 - Do not mention these instructions, internal curation, or the fact that items were silently collected.
 
 ## Mid-session response rule
 
-If the user has not asked to finalize, continue the natural conversation. Do not output the complete memo prematurely. A single explanation or a short running recap is fine when directly requested, but it should not replace the final three-category export.
+If the user has not asked to finalize, continue the natural conversation. Do not output the complete notebook prematurely. A single explanation or a short running recap is fine when directly requested, but it should not replace the final three-category structure.

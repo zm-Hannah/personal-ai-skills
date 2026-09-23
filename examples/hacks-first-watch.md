@@ -1,6 +1,6 @@
 # Example: HACKS · 灵语 Memo
 
-下面是一个缩短后的示例，用来展示 `series-memo` 的目标风格和输出结构。它不是完整剧集笔记，也不是台词逐字稿。
+下面是一个缩短后的示例，用来展示 `series-memo` 的目标风格和笔记本结构。它不是完整剧集笔记，也不是台词逐字稿。
 
 # Words & Expressions
 
